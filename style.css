@@ -1,5 +1,112 @@
-.box-news {
-    margin-bottom: 40px;
-    border: 1px solid #ddd;
-    padding: 8px;
+body {
+    background: #0c0b0b;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.subtitle {
+    border-left: 6px solid #a56a24;
+    padding-left: 16px;
+}
+
+.box {
+    text-decoration: none;
+}
+
+.box-news-header {
+    height: 240px;
+}
+
+.box-news-body {
+    height: 400px;
+}
+
+.box-news-header,
+.box-news-body {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 3px solid #0c0b0b;
+    transition: all 1s;
+}
+
+.box-publishers-header {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 3px solid #dddddd;
+    transition: all 0.5s;
+}
+
+.box-publishers-header:hover {
+    cursor: pointer;
+    background: #dddddd;
+    color: #0c0b0b;
+    transition: all 0.5s;
+}
+
+.box-news-header:hover,
+.box-news-body:hover {
+    box-shadow: none;
+    border: 3px solid #dddddd;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.box-news-header .info-news-header,
+.box-news-body .info-news-body {
+    color: #fff;
+    background: rgba(25, 25, 25, 0.9);
+    padding: 8px 16px;
+}
+
+.box-news-header .info-news-header h2,
+.box-news-body .info-news-body h2,
+.info-publishers-header h2 {
+    font-size: 16px;
+}
+
+.box-news-header .info-news-header p:first-child,
+.box-news-body .info-news-body p:first-child {
+    margin-bottom: 8px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.box-news-body .info-news-body p:last-child {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+footer .nav-link {
+    color: #fff !important;
+}
+
+@media screen and (max-width: 768px) {
+    .box-news-header .info-news-header h2,
+    .box-news-body .info-news-body h2 {
+        font-size: 14px;
+    }
+    .box-news-header .info-news-header p:first-child,
+    .box-news-body .info-news-body p:first-child {
+        font-size: 10px;
+        line-height: 1.25;
+    }
+    .box-news-body .info-news-body p:last-child {
+        font-size: 12px;
+        line-height: 1.25;
+    }
 }
