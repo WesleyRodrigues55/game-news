@@ -1,6 +1,7 @@
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
+    mode: 'production',
     // Seu arquivo de entrada
     entry: {
         main: './src/main.js',
