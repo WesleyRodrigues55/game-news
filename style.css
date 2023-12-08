@@ -1,5 +1,5 @@
 body {
-    background: #0c0b0b;
+    background: #1a1a1a;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -18,12 +18,18 @@ body {
     height: 240px;
 }
 
-.box-news-body {
+.box-platform {
+    margin-top: 16px;
+}
+
+.box-news-body,
+.box-platform {
     height: 400px;
 }
 
 .box-news-header,
-.box-news-body {
+.box-news-body,
+.box-platform {
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -49,9 +55,36 @@ body {
     overflow: hidden;
     border: 3px solid #dddddd;
     transition: all 0.5s;
+    color: #fff;
 }
 
-.box-publishers-header:hover {
+.box-ratings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 3px solid #dddddd;
+    transition: all 1s;
+}
+
+.box-ratings p {
+    margin-bottom: 0px;
+}
+
+.box-platform p {
+    text-align: center;
+    color: #fff;
+    background: rgba(25, 25, 25, 0.9);
+    padding: 8px 16px;
+    margin-bottom: 0;
+}
+
+.box-publishers-header:hover,
+.box-ratings:hover {
     cursor: pointer;
     background: #dddddd;
     color: #0c0b0b;
@@ -59,7 +92,8 @@ body {
 }
 
 .box-news-header:hover,
-.box-news-body:hover {
+.box-news-body:hover,
+.box-platform:hover {
     box-shadow: none;
     border: 3px solid #dddddd;
     cursor: pointer;
@@ -93,6 +127,11 @@ body {
 
 footer .nav-link {
     color: #fff !important;
+}
+
+.background-publisher,
+.background-game-info {
+    background-position: center !important;
 }
 
 @media screen and (max-width: 768px) {

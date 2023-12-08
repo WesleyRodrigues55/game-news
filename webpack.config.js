@@ -5,6 +5,8 @@ module.exports = {
     entry: {
         main: './src/main.js',
         loadPublishers: './src/load-publishers.js',
+        loadTags: './src/load-tags.js',
+        loadGameInfo: './src/load-game-info.js',
     },
 
     // Configurações de saída
