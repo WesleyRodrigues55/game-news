@@ -14,7 +14,7 @@ function getParameterUrl() {
     return params.get('slug');
 }
 
-const publishersBody = (data) => {
+const tagsBody = (data) => {
     const valueParameter = getParameterUrl()
     const index = data.results.findIndex(item => item.slug === valueParameter);
 
@@ -32,14 +32,14 @@ const publishersBody = (data) => {
             div.classList.add('col-md-4')
             div.classList.add('col-lg-3')
             div.innerHTML = `
-            <a href="../pages/game-info.html?slug=${item.slug}&id=${item.id}" class="box">
-                <div class="box-publishers-header m-2">
-                    <div class="info-publishers-header">
-                        <h2>${item.name}</h2>
+                <a href="../pages/game-info.html?slug=${item.slug}&id=${item.id}" class="box">
+                    <div class="box-publishers-header m-2">
+                        <div class="info-publishers-header">
+                            <h2>${item.name}</h2>
+                        </div>
                     </div>
-                </div>
-            </a>
-        `;
+                </a>
+            `;
             news.append(div)
         })
     } else {
@@ -49,6 +49,6 @@ const publishersBody = (data) => {
 
 window.addEventListener("load", (e) => {
     const apiKey = process.env.API_KEY_GAMES;
-    const urlApiBody = 'https://api.rawg.io/api/publishers?key=' + apiKey;
-    getApi(urlApiBody, publishersBody)
+    const urlApiBody = 'https://api.rawg.io/api/tags?key=' + apiKey;
+    getApi(urlApiBody, tagsBody)
 })

@@ -53,11 +53,13 @@ const newsBody = (data) => {
         const div = document.createElement('div')
         div.classList.add('col-md-6')
         div.innerHTML = `
-            <div class="box-news-body m-2">
-                <div class="info-news-body">
-                    <h2>${item.name}</h2>
+            <a href="../pages/tags.html?slug=${item.slug}" class="box">
+                <div class="box-news-body m-2">
+                    <div class="info-news-body">
+                        <h2>${item.name}</h2>
+                    </div>
                 </div>
-            </div>
+            </a>
         `;
         news.append(div)
         boxNewsBody[i].style.backgroundImage = `url("${item.image_background}")`
